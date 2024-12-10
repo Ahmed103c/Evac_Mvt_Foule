@@ -46,7 +46,7 @@ Cette simulation est basée sur le **modèle de force sociale** de Bertrand Maur
 
 Le modèle vise à simuler les mouvements d’une foule en tenant compte des interactions sociales et des forces physiques entre les individus. Une version **non inertielle** (overdamped) du modèle est utilisée ici, où les forces d’interaction sont proportionnelles à \(1/\tau\), avec \(\tau \to 0\). Cela simplifie les équations différentielles en un système d’équations différentielles ordinaires du premier ordre :
 
-![Exemple d'image](Ressource\img1.png)
+![Exemple d'image](Ressource/img1.png)
 où :
 
 ### Caractéristiques principales :
