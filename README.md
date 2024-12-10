@@ -11,3 +11,7 @@ Il faudra ensuite l'activer et installer les modules importants à partir de req
 > > .\venv\Scripts\activate
 
 > > pip install -r requirements.txt
+
+## Exécution du projet
+
+> > python .\src\main.py

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from simulation import simulate
 
-def tracage(nombre_ball, nombre_simulation): 
+def tracage(nombre_ball,largeur_porte, nombre_simulation): 
     import numpy as np
     import matplotlib.pyplot as plt
     from sklearn.linear_model import LinearRegression
@@ -13,7 +13,7 @@ def tracage(nombre_ball, nombre_simulation):
 
     # Effectuer les simulations
     for i in range(nombre_simulation):
-        temps_simulation = simulate(nombre_ball)
+        temps_simulation = simulate(nombre_ball,largeur_porte)
         Temps_Sortie_Personne.append(temps_simulation)
 
     # Convertir en tableau numpy

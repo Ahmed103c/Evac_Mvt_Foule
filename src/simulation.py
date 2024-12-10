@@ -4,8 +4,9 @@ import time
 from random import randint
 from ball import Ball
 from utils import create_segment
+from utils import draw_exit
 
-def simulate(Nombre_Ball):
+def simulate(Nombre_Ball,largeur_porte):
     pygame.init()
     WIDTH = 800
     HEIGHT = 600
@@ -23,8 +24,18 @@ def simulate(Nombre_Ball):
             balls.append(Ball(position, 8, space, screen))
 
     balls_2 = balls.copy()
-    create_segment((500, 0), (500, 270), 15, space)
-    create_segment((500, 330), (500, 600), 15, space)
+    
+    # create_segment((500, 0), (500, 270), 15, space)
+    # create_segment((500, 330), (500, 600), 15, space)
+    hauteur_totale = 600
+    y_milieu = hauteur_totale // 2
+    demi_largeur = largeur_porte // 2
+
+    # Segments de la fenêtre de sortie
+    create_segment((500, 0), (500, y_milieu - demi_largeur), 15, space)
+    create_segment((500, y_milieu + demi_largeur), (500, hauteur_totale), 15, space)
+    
+    
     Temps_Sortie_chaque_boule = []
     running = True
     start_time = time.time()
@@ -47,8 +58,9 @@ def simulate(Nombre_Ball):
                 Temps_Sortie_chaque_boule.append(middle_time - start_time)
                 if s == Nombre_Ball:
                     last_ball = ball  # Mettre à jour la dernière boule
-        pygame.draw.line(screen, (0, 0, 0), (500, 0), (500, 270), 15)
-        pygame.draw.line(screen, (0, 0, 0), (500, 330), (500, 600), 15)
+        # pygame.draw.line(screen, (0, 0, 0), (500, 0), (500, 270), 15)
+        # pygame.draw.line(screen, (0, 0, 0), (500, 330), (500, 600), 15)
+        draw_exit(screen,largeur_porte, couleur=(0, 0, 255))
         pygame.display.flip()
         clock.tick(100)
         space.step(1 / 100)
