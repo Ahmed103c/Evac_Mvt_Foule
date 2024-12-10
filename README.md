@@ -51,6 +51,7 @@ où :
 
 ### Caractéristiques principales :
 
+<img src="images/exemple.png" width="300" height="200"/>
 1. **Modèle non-inertiel :** Les déplacements sont modélisés en supposant une absence d'inertie, ce qui est pertinent dans des scénarios où les mouvements sont dominés par des forces sociales immédiates.
 2. **Vitesse désirée :** Chaque individu a une vitesse cible, représentant son objectif (par exemple, atteindre une sortie).
 3. **Forces d'interaction :** Elles reflètent les interactions avec d'autres individus, empêchant la collision et favorisant un comportement réaliste de la foule.
