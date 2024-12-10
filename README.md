@@ -44,8 +44,14 @@ python .\src\main.py
 
 Cette simulation est basée sur le **modèle de force sociale** de Bertrand Maury, tel qu'élaboré dans son livre _Crowds in Equations: An Introduction to the Microscopic Modeling of Crowds_.
 
+Modèle de force sociale :
+
+![Exemple d'image](Ressource/img1.png)
+
 Le modèle vise à simuler les mouvements d’une foule en tenant compte des interactions sociales et des forces physiques entre les individus. Une version **non inertielle** (overdamped) du modèle est utilisée ici. Cela simplifie les équations différentielles en un système d’équations différentielles ordinaires du premier ordre :
+
 ![Exemple d'image](Ressource/img2.png)
+
 où :
 
 ### Caractéristiques principales :
@@ -65,4 +71,15 @@ où :
    4.Tracage d'une courbe de régression linéaire basée sur les résultats moyens de plusieurs itérations.
    Cela permet de lisser les données, car les positions initiales des individus sont choisies aléatoirement, ce qui peut introduire des variations dans les résultats.
 
----
+## Exemple de Résultats obtenus pour :
+
+1. nombre de personne = 80
+2. largeur porte = 60
+3. nombre de simulation répétée : 5
+4. Coefficient d'interaction sociale U = 70.0
+5. Distance interpersonnelle delta = 0.1
+
+capture d'écran de la simulation :
+![Exemple d'image](Ressource/img3.png)
+
+## ![Exemple d'image](Ressource/img4.png)
