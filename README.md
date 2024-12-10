@@ -73,13 +73,16 @@ où :
 
 ## Exemple de Résultats obtenus pour :
 
-1. nombre de personne = 80
-2. largeur porte = 60
-3. nombre de simulation répétée : 5
-4. Coefficient d'interaction sociale U = 70.0
-5. Distance interpersonnelle delta = 0.1
+1. **nombre de personne** = 80
+2. **largeur porte** = 60
+3. **nombre de simulation** répétée : 5
+4. **Coefficient d'interaction sociale U** = 70.0
+5. **Distance interpersonnelle delta** = 0.1
 
-capture d'écran de la simulation :
+**capture d'écran de la simulation :**
+
 ![Exemple d'image](Ressource/img3.png)
 
-## ![Exemple d'image](Ressource/img4.png)
+**capture d'écran du tracage :**
+
+![Exemple d'image](Ressource/img4.png)
