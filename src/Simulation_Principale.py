@@ -35,7 +35,7 @@ class Ball:
         diff_y = target_point[1] - self.position[1]
         distance = math.sqrt(diff_x**2 + diff_y**2)
         gradient_x = diff_x / distance
-        gradient_y = diff_y / distance
+        gradient_y = diff_y / distance  
         # Calculer la vitesse désirée
         desired_velocity_x = U * gradient_x
         desired_velocity_y = U * gradient_y
@@ -49,8 +49,8 @@ class Ball:
                 diff_y = ball.position[1] - self.position[1]
                 distance = math.sqrt(diff_x**2 + diff_y**2)
                 direction_x = diff_x / distance
-                direction_y = diff_y / distance
-                direction = [diff_x, diff_y]
+                direction_y = diff_y / distance #ICI (  ) * (s / 10 )
+                direction = [diff_x, diff_y] # ICI 
                 # Calculer la correction de vitesse
                 correction = [-U * math.exp(-distance/delta) * d for d in direction]
                 correction_velocity = (correction_velocity[0] + correction[0], correction_velocity[1] + correction[1]) 

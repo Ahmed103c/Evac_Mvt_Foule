@@ -1,0 +1,5 @@
+pygame==2.6.1
+pymunk==6.9.0
+numpy==2.2.0
+matplotlib==3.9.3
+scikit-learn==1.5.2
