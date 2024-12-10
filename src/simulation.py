@@ -25,8 +25,6 @@ def simulate(Nombre_Ball,largeur_porte):
 
     balls_2 = balls.copy()
     
-    # create_segment((500, 0), (500, 270), 15, space)
-    # create_segment((500, 330), (500, 600), 15, space)
     hauteur_totale = 600
     y_milieu = hauteur_totale // 2
     demi_largeur = largeur_porte // 2
@@ -46,11 +44,11 @@ def simulate(Nombre_Ball,largeur_porte):
             if event.type == pygame.QUIT:
                 running = False
         screen.fill(WHITE)
-        # pygame.draw.circle(screen,(0,255,0),target_point,5)
+
         for ball in balls:
             ball.update(balls, target_point, s)
             ball.draw()
-            # Vérification du passage de chaque boule à travers la ligne
+
             if ball.body.position.x > 500 and ball in balls_2:
                 s += 1
                 balls_2.remove(ball)
@@ -58,12 +56,12 @@ def simulate(Nombre_Ball,largeur_porte):
                 Temps_Sortie_chaque_boule.append(middle_time - start_time)
                 if s == Nombre_Ball:
                     last_ball = ball  # Mettre à jour la dernière boule
-        # pygame.draw.line(screen, (0, 0, 0), (500, 0), (500, 270), 15)
-        # pygame.draw.line(screen, (0, 0, 0), (500, 330), (500, 600), 15)
+
         draw_exit(screen,largeur_porte, couleur=(0, 0, 255))
         pygame.display.flip()
         clock.tick(100)
         space.step(1 / 100)
+        
         # Vérification si la dernière boule a passé la ligne
         if last_ball and not last_ball.passed_line:
             last_ball.passed_line = True

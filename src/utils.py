@@ -13,7 +13,5 @@ def draw_exit(screen, largeur_fenetre=60, couleur=(0, 0, 255)):
     y_milieu = hauteur_totale // 2
     demi_largeur = largeur_fenetre // 2
 
-    # Partie supérieure
     pygame.draw.line(screen, couleur, (500, 0), (500, y_milieu - demi_largeur), 15)
-    # Partie inférieure
     pygame.draw.line(screen, couleur, (500, y_milieu + demi_largeur), (500, hauteur_totale), 15)
