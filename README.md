@@ -44,14 +44,12 @@ python .\src\main.py
 
 Cette simulation est basée sur le **modèle de force sociale** de Bertrand Maury, tel qu'élaboré dans son livre _Crowds in Equations: An Introduction to the Microscopic Modeling of Crowds_.
 
-Le modèle vise à simuler les mouvements d’une foule en tenant compte des interactions sociales et des forces physiques entre les individus. Une version **non inertielle** (overdamped) du modèle est utilisée ici, où les forces d’interaction sont proportionnelles à \(1/\tau\), avec \(\tau \to 0\). Cela simplifie les équations différentielles en un système d’équations différentielles ordinaires du premier ordre :
-
-![Exemple d'image](Ressource/img1.png)
+Le modèle vise à simuler les mouvements d’une foule en tenant compte des interactions sociales et des forces physiques entre les individus. Une version **non inertielle** (overdamped) du modèle est utilisée ici. Cela simplifie les équations différentielles en un système d’équations différentielles ordinaires du premier ordre :
+![Exemple d'image](Ressource/img2.png)
 où :
 
 ### Caractéristiques principales :
 
-<img src="images/exemple.png" width="300" height="200"/>
 1. **Modèle non-inertiel :** Les déplacements sont modélisés en supposant une absence d'inertie, ce qui est pertinent dans des scénarios où les mouvements sont dominés par des forces sociales immédiates.
 2. **Vitesse désirée :** Chaque individu a une vitesse cible, représentant son objectif (par exemple, atteindre une sortie).
 3. **Forces d'interaction :** Elles reflètent les interactions avec d'autres individus, empêchant la collision et favorisant un comportement réaliste de la foule.
